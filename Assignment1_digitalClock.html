@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL CLOCK</title>
+    <script>
+        let ttt = "";
+        let clock = setInterval(() => {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let setm = "";
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (hours > 12) {
+                hours = hours - 12;
+                setm = "PM";
+            }
+            else {
+                setm = "AM";
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            ttt =`${hours}:${minutes}:${seconds}  ${setm}`;
+            document.getElementById("screen").innerText = ttt;
+        }, 1000);
+    </script>
+    <style>
+        .body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-head {
+            width: 100%;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 60px;
+        }
+
+        .outerbody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50vw;
+            margin: auto;
+            height: 30vw;
+            background-color: black;
+            border-radius: 20px;
+            border: 4px solid black;
+            color:white;
+        }
+
+        .screen {
+            width: 85%;
+            height: 70%;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            margin: 20px;
+            font-size: 100px;
+            padding-top: 50px;
+            border: 4px solid white;
+            text-align: center;
+            justify-content: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-head">DIGITAL CLOCK</h1>
+    <div class="outerbody">
+        <h1 class="screen" id="screen">
+            
+        </h1>
+</body>
+
+</html>
