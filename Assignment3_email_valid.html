@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <script type="text/javascript">
+        function validateform(){
+            var email = document.myform.email.value;
+            // check for empty form
+            if(email == null || email == ""){
+                alert("please enter an email")
+            }
+            // check if @ is present
+            // include checks if particular character is present in string or not
+            else if(!email.includes('@') || !email.includes('.')){
+                alert("email valid email with @ and .");
+            }
+            // check for invalid symbols
+            else if(email.includes('#') || email.includes('!') || email.includes('*') || email.includes('&') || email.includes('$') || email.includes('%') || email.includes('(') || email.includes(')') || email.includes('^')){
+                alert("invalid symbols in email address!! enter only valid emailids")
+            }
+            // on valid email, user email vapidated
+            else{
+                alert("Valid email!! congratulations !!")
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form name="myform" method="abc.jsp" onsubmit="return validateform()" >
+    Email : <input type="text" name="email"><br/>
+    <input type="submit" value="register">
+    </form>
+
+</body>
+</html>
