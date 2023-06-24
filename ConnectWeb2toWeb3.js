@@ -56,9 +56,9 @@ const abi = [
 		}
 	]
  
-const contractID = "0x0C4321C79D846Cb4B33782f4f78343cf250d1569";
+const contractID = "Contract ID";
 
-const private_key = "82bd2cbd67ef7ebe01d7338d7604ebb4aa65f3195b73343f9d33753d1baaca1c";
+const private_key = "Your Private Key";
 
 let url = "https://polygon-mumbai.g.alchemy.com/v2/K1g9-tUnnYwAnFMO3W1IlKPurO1PZ7tA";
 
