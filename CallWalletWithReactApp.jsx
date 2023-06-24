@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 import {ethers} from 'ethers'
 
 function App() {
-  const contractID = "0x0C4321C79D846Cb4B33782f4f78343cf250d1569";
+  const contractID = "Contract ID";
   const getContract = () =>{
     let temp = new ethers.providers.Web3Provider(window.ethereum)
 
